@@ -1,0 +1,71 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  border: 5px solid black;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    "dis dis dis dis"
+    "ac ac div multiply"
+    "seven eight nine subtract"
+    "four five six add"
+    "one two three equals"
+    "zero zero decimal equals";
+}
+
+.padButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4d4d4d;
+  color: white;
+  border: 1px solid black;
+  font-size: 20px;
+  padding: 20px 40px;
+  cursor: pointer;
+}
+.padButton:hover {
+  border: 1px solid white;
+  color: black;
+}
+
+.light-grey {
+  background-color: grey;
+}
+.dis {
+  grid-area: dis;
+  text-align: right;
+}
+.dis input {
+  height: 50%;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background-color: black;
+  text-align: right;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: "Orbitron", sans-serif;
+}
+.expression {
+  color: orange;
+}
+.ac {
+  grid-area: ac;
+  background-color: tomato;
+}
+.zero {
+  grid-area: zero;
+}
+.equals {
+  grid-area: equals;
+  background-color: rgb(0, 68, 102);
+}
